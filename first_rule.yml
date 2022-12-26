@@ -17,5 +17,8 @@ groups:
     rules:
     - alert: node_exporter_status
       expr: up{job="node_exporter"} == 0
-      for: 2m
+      for: 2m 
+
+    - record: job:Summary_Instrumenation_app_processing_request_seconds:rate_1m
+      expr: rate(request_processing_seconds_sum [1m])/ rate (request_processing_seconds_count [1m])
     
