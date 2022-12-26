@@ -16,7 +16,7 @@ def render_user_page(self):
     
 if  __name__ == '__main__':
   # Start up the server to expose the metrics.
-  start_http_server(8000)
+  start_http_server(5555)
   # Generate some requests.
   while True:
     render_user_page(random.random())
